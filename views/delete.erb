@@ -1,0 +1,7 @@
+<h1>Delete Task</h1>
+<p>Are you sure you want to delete the <strong><%= @task.name %></strong> task?</p>
+<form action="/<%= @task.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Yes">
+  <a href="/">No</a>
+</form>

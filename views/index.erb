@@ -1,0 +1,10 @@
+<h1>Task List</h1>
+<ul>
+  <% @tasks.sort_by { |t| t.id }.each do |t| %>
+    <li>
+      <%= t.name %><%= (" - " + t.description) if t.description %><%= " ✓" if t.completed %>
+      <a href="/<%= t.id %>/complete">Mark Complete</a> | <a href="/<%= t.id %>/delete">Delete</a>
+    </li>
+  <% end %>
+</ul>
+<a href="/new">Add a new task</a>

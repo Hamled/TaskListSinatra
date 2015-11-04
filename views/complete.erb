@@ -1,0 +1,7 @@
+<h1>Mark Task Complete</h1>
+<p>Are you sure you want to mark the <strong><%= @task.name %></strong> task as complete?</p>
+<form action="/<%= @task.id %>/complete" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="Yes">
+  <a href="/">No</a>
+</form>
